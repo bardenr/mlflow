@@ -3,7 +3,7 @@ import subprocess
 import pytest
 
 
-@pytest.fixture(scope="package", autouse=True)
+@pytest.fixture(scope="package", autouse=False)
 def build_mlflow_image():
     subprocess.check_call([
         "docker",
